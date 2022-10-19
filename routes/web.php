@@ -36,3 +36,9 @@ Route::get('/name/{hevilia}', function ($name) {
 Route::get('/post/{nrp}/{name}', function ($nrp,$name) {
     return "Hello " . $name . $nrp;
 })->where('name', '[A-Za-z]+') ->where('nrp', '[0-9]+');
+
+Route::get('person', 'PersonController@index');
+
+Route::get('/person/show/{param}', 'PersonController@show');
+
+Route::resource('student', 'StudentController');
