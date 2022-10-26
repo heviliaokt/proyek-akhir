@@ -39,6 +39,14 @@ Route::get('/post/{nrp}/{name}', function ($nrp,$name) {
 
 Route::get('person', 'PersonController@index');
 
-Route::get('/person/show/{param}', 'PersonController@show');
+//Route::get('/person/show/{param}', 'PersonController@show');//
 
 Route::resource('student', 'StudentController');
+
+Route::get('/homepage', function () {
+    return view('home' , ["name" => "Hevilia Oktaviani"]);
+});
+
+Route::get('/person/send-data', 'PersonController@sendData');
+
+Route::get('/person/data', 'PersonController@data');
