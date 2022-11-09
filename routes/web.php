@@ -50,3 +50,7 @@ Route::get('/homepage', function () {
 Route::get('/person/send-data', 'PersonController@sendData');
 
 Route::get('/person/data', 'PersonController@data');
+// Method GET
+Route::get('person/create', 'PersonController@create')->name('person.create');
+// Method POST
+Route::post('person/store', 'PersonController@store')->name('person.store');

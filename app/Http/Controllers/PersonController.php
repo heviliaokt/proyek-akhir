@@ -26,4 +26,18 @@ class PersonController extends Controller
 
         return view("person.data", ['names' => $names]);
     }
+
+    public function create() {
+        return view('person.create');
+    }
+
+    // Untuk menerima inputan dari Form
+    public function store(Request $request) {
+        $this->validate($request, [
+            'name' => 'required|max:30',
+            'email' => 'required|email'
+        ]);
+        $person = $request;
+        return view('person.print', compact('person'));
+    }
 }
