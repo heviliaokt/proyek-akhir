@@ -39,7 +39,7 @@ Route::get('/post/{nrp}/{name}', function ($nrp,$name) {
 
 Route::get('person', 'PersonController@index')->name('person.index');
 
-//Route::get('/person/show/{param}', 'PersonController@show');//
+Route::get('/person/show/{param}', 'PersonController@show');//
 
 Route::resource('student', 'StudentController');
 

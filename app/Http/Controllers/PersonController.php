@@ -10,7 +10,7 @@ class PersonController extends Controller
     private $name = "Hevilia Oktaviani";
 
     public function index() {
-        return view("person.index");
+      return view("person.index");
     }
 
     public function sendData() {
